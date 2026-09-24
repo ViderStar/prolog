@@ -1,0 +1,49 @@
+Welcome to SWI-Prolog (threaded, 64 bits, version 10.0.2)
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software.
+Please run ?- license. for legal details.
+
+For online help and background, visit https://www.swi-prolog.org
+For built-in help, use ?- help(Topic). or ?- apropos(Word).
+
+1 ?- [errors_demo].
+Warning: /Users/artyo/PycharmProjects/prolog/lab_01/examples/errors_demo.pl:15:
+Warning:    Singleton variables: [Y]
+Warning: /Users/artyo/PycharmProjects/prolog/lab_01/examples/errors_demo.pl:21:
+Warning:    Clauses of sibling/2 are not together in the source-file
+Warning:    Earlier definition at /Users/artyo/PycharmProjects/prolog/lab_01/examples/errors_demo.pl:19
+Warning:    Current predicate: cousin/2
+Warning:    Use :- discontiguous sibling/2. to suppress this message
+true.
+
+2 ?- uncle(X, jim).
+ERROR: Unknown procedure: uncle/2 (DWIM could not correct goal)
+3 ?- parent(tom bob).
+ERROR: Syntax error: Operator expected
+ERROR: parent(tom
+ERROR: ** here **
+ERROR:  bob) .
+4 ?- [no_such_file].
+ERROR: source_sink `no_such_file' does not exist
+ERROR: In:
+ERROR:   [23] throw(error(existence_error(source_sink,no_such_file),_188))
+ERROR:   [20] '$load_file_e'(no_such_file,user,[expand(false),...]) at /opt/homebrew/Cellar/swi-prolog/10.0.2/lib/swipl/boot/init.pl:2510
+ERROR:   [19] '$load_file'(no_such_file,user,[expand(false),...]) at /opt/homebrew/Cellar/swi-prolog/10.0.2/lib/swipl/boot/init.pl:2477
+ERROR:   [11] toplevel_call(user:user: ...) at /opt/homebrew/Cellar/swi-prolog/10.0.2/lib/swipl/boot/toplevel.pl:1529
+ERROR:
+ERROR: Note: some frames are missing due to last-call optimization.
+ERROR: Re-run your program in debug mode (:- debug.) to get more detail.
+5 ?- X is foo + 1.
+ERROR: Arithmetic: `foo/0' is not a function
+ERROR: In:
+ERROR:   [12] _2272 is foo+1
+ERROR:   [11] toplevel_call(user:user: ...) at /opt/homebrew/Cellar/swi-prolog/10.0.2/lib/swipl/boot/toplevel.pl:1529
+6 ?- ancestor_bad(X, jim).
+ERROR: Stack limit (19.1Mb) exceeded
+ERROR:   Stack sizes: local: 16.0Mb, global: 0.8Mb, trail: 0Kb
+ERROR:   Stack depth: 104,729, last-call: 0%, Choice points: 104,721
+ERROR:   Probable infinite recursion (cycle):
+ERROR:     [104,729] user:ancestor_bad(_217306, jim)
+ERROR:     [104,728] user:ancestor_bad(_217326, jim)
+   Exception: (104,728) ancestor_bad(_217238, jim) ? abort
+% Execution Aborted
+7 ?- halt.

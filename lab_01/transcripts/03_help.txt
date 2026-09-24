@@ -1,0 +1,17 @@
+Welcome to SWI-Prolog (threaded, 64 bits, version 10.0.2)
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software.
+Please run ?- license. for legal details.
+
+For online help and background, visit https://www.swi-prolog.org
+For built-in help, use ?- help(Topic). or ?- apropos(Word).
+
+1 ?- help(halt/0).
+                                                                      Availability: built-in
+
+halt                                                                                   [ISO]
+    Terminate Prolog execution with default exit code using halt/1. The default exit code is
+    normally 0, but can be 1 if one of the  Prolog flags  on_error or  on_warning is  set to
+    status and there have been errors or warnings.
+true.
+
+2 ?- halt.

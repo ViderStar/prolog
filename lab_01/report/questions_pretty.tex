@@ -1,0 +1,273 @@
+\small
+\begin{enumerate}[label=\textbf{\arabic*.}, leftmargin=0pt, itemsep=1.2em]
+\item Что в Прологе называется фактом?
+\begin{itemize}[label=$\square$, leftmargin=1.5cm, itemsep=0.2em, topsep=0.3em]
+\item Клауза с головой и непустым телом, истинная при выполнении условий
+\item Клауза без тела, утверждение, истинное безусловно (например, parent(tom, bob).)
+\item Вопрос к базе знаний, вводимый после приглашения \texttt{?-}
+\item Директива, выполняемая при загрузке файла
+\end{itemize}
+{\small\textit{Правильный ответ: Клауза без тела, утверждение, истинное безусловно (например, parent(tom, bob).).}}
+
+\item Какая последовательность символов отделяет голову правила от его тела?
+\begin{itemize}[label=$\square$, leftmargin=1.5cm, itemsep=0.2em, topsep=0.3em]
+\item :-
+\item ->
+\item :=
+\item <-
+\end{itemize}
+{\small\textit{Правильный ответ: :-.}}
+
+\item Какой запрос загружает файл family.pl в интерактивной среде SWI-Prolog?
+\begin{itemize}[label=$\square$, leftmargin=1.5cm, itemsep=0.2em, topsep=0.3em]
+\item \texttt{?-} [family].
+\item \texttt{?-} load family.
+\item \texttt{?-} open(family).
+\item \texttt{?-} import(family).
+\end{itemize}
+{\small\textit{Правильный ответ: \texttt{?-} [family].}}
+
+\item Каким встроенным предикатом завершают работу интерпретатора SWI-Prolog?
+\begin{itemize}[label=$\square$, leftmargin=1.5cm, itemsep=0.2em, topsep=0.3em]
+\item exit.
+\item quit.
+\item halt.
+\item stop.
+\end{itemize}
+{\small\textit{Правильный ответ: halt.}}
+
+\item Что ответит SWI-Prolog на запрос \texttt{?-} parent(bob, tom). для программы family.pl?
+\begin{itemize}[label=$\square$, leftmargin=1.5cm, itemsep=0.2em, topsep=0.3em]
+\item true.
+\item false.
+\item ERROR: Unknown procedure
+\item X = bob.
+\end{itemize}
+{\small\textit{Правильный ответ: false.}}
+
+\item Какую клавишу нажимают в top-level SWI-Prolog, чтобы получить следующее решение запроса?
+\begin{itemize}[label=$\square$, leftmargin=1.5cm, itemsep=0.2em, topsep=0.3em]
+\item ; (точка с запятой)
+\item Enter
+\item . (точка)
+\item Esc
+\end{itemize}
+{\small\textit{Правильный ответ: ; (точка с запятой).}}
+
+\item Как называется механизм возврата к последней точке выбора для поиска альтернативного решения?
+\begin{itemize}[label=$\square$, leftmargin=1.5cm, itemsep=0.2em, topsep=0.3em]
+\item Унификация
+\item Хвостовая рекурсия
+\item Возврат (backtracking)
+\item Индексация клауз
+\end{itemize}
+{\small\textit{Правильный ответ: Возврат (backtracking).}}
+
+\item Что такое унификация в Прологе?
+\begin{itemize}[label=$\square$, leftmargin=1.5cm, itemsep=0.2em, topsep=0.3em]
+\item Объединение двух файлов программы в один
+\item Сопоставление двух термов с подбором значений переменных, при которых термы становятся одинаковыми
+\item Приведение всех атомов к нижнему регистру
+\item Удаление повторяющихся фактов из базы
+\end{itemize}
+{\small\textit{Правильный ответ: Сопоставление двух термов с подбором значений переменных, при которых термы становятся одинаковыми.}}
+
+\item Какие имена в Прологе обозначают переменные?
+\begin{itemize}[label=$\square$, leftmargin=1.5cm, itemsep=0.2em, topsep=0.3em]
+\item Имена, начинающиеся со строчной буквы
+\item Имена, начинающиеся с заглавной буквы или символа подчёркивания
+\item Имена, заключённые в одинарные кавычки
+\item Имена, начинающиеся с цифры
+\end{itemize}
+{\small\textit{Правильный ответ: Имена, начинающиеся с заглавной буквы или символа подчёркивания.}}
+
+\item Чем является tom в факте parent(tom, bob).?
+\begin{itemize}[label=$\square$, leftmargin=1.5cm, itemsep=0.2em, topsep=0.3em]
+\item Переменной
+\item Строкой
+\item Атомом (константой)
+\item Именем предиката
+\end{itemize}
+{\small\textit{Правильный ответ: Атомом (константой).}}
+
+\item Какой запрос включает пошаговую трассировку выполнения целей?
+\begin{itemize}[label=$\square$, leftmargin=1.5cm, itemsep=0.2em, topsep=0.3em]
+\item \texttt{?-} step.
+\item \texttt{?-} trace.
+\item \texttt{?-} debug\_on.
+\item \texttt{?-} verbose.
+\end{itemize}
+{\small\textit{Правильный ответ: \texttt{?-} trace.}}
+
+\item Какие порты процедурной модели (модели Бёрда) показывает трассировщик SWI-Prolog?
+\begin{itemize}[label=$\square$, leftmargin=1.5cm, itemsep=0.2em, topsep=0.3em]
+\item Call, Exit, Redo, Fail
+\item Start, Stop, Pause, Resume
+\item Input, Output, Error, Return
+\item Load, Run, Trace, Halt
+\end{itemize}
+{\small\textit{Правильный ответ: Call, Exit, Redo, Fail.}}
+
+\item Какую роль играет первая клауза ancestor(X, Y) :- parent(X, Y). в определении ancestor/2?
+\begin{itemize}[label=$\square$, leftmargin=1.5cm, itemsep=0.2em, topsep=0.3em]
+\item Задаёт рекурсивный шаг
+\item Задаёт базовый случай рекурсии: родитель является предком
+\item Запрещает циклы в родословной
+\item Объявляет типы аргументов
+\end{itemize}
+{\small\textit{Правильный ответ: Задаёт базовый случай рекурсии: родитель является предком.}}
+
+\item Какое первое решение вернёт запрос \texttt{?-} grandparent(X, jim).?
+\begin{itemize}[label=$\square$, leftmargin=1.5cm, itemsep=0.2em, topsep=0.3em]
+\item X = tom
+\item X = bob
+\item X = pat
+\item false.
+\end{itemize}
+{\small\textit{Правильный ответ: X = bob.}}
+
+\item Сколько решений имеет запрос \texttt{?-} parent(X, Y). для программы family.pl?
+\begin{itemize}[label=$\square$, leftmargin=1.5cm, itemsep=0.2em, topsep=0.3em]
+\item 3
+\item 4
+\item 5
+\item 6
+\end{itemize}
+{\small\textit{Правильный ответ: 5.}}
+
+\item Что означает ответ false. после нескольких нажатий ; в top-level?
+\begin{itemize}[label=$\square$, leftmargin=1.5cm, itemsep=0.2em, topsep=0.3em]
+\item В программе есть ошибка
+\item Найденные ранее решения неверны
+\item Других решений нет, перебор исчерпан
+\item Запрос содержит синтаксическую ошибку
+\end{itemize}
+{\small\textit{Правильный ответ: Других решений нет, перебор исчерпан.}}
+
+\item Что делает запрос \texttt{?-} listing(ancestor/2).?
+\begin{itemize}[label=$\square$, leftmargin=1.5cm, itemsep=0.2em, topsep=0.3em]
+\item Удаляет предикат ancestor/2 из базы
+\item Выводит на экран все клаузы предиката ancestor/2
+\item Показывает количество решений ancestor/2
+\item Включает трассировку ancestor/2
+\end{itemize}
+{\small\textit{Правильный ответ: Выводит на экран все клаузы предиката ancestor/2.}}
+
+\item Для чего служит запрос \texttt{?-} make.?
+\begin{itemize}[label=$\square$, leftmargin=1.5cm, itemsep=0.2em, topsep=0.3em]
+\item Компилирует программу в исполняемый файл
+\item Перезагружает исходные файлы, изменённые после загрузки
+\item Создаёт новый пустой файл программы
+\item Собирает проект с помощью утилиты make
+\end{itemize}
+{\small\textit{Правильный ответ: Перезагружает исходные файлы, изменённые после загрузки.}}
+
+\item Какое сообщение выдаст SWI-Prolog на запрос к неопределённому предикату \texttt{?-} uncle(X, jim).?
+\begin{itemize}[label=$\square$, leftmargin=1.5cm, itemsep=0.2em, topsep=0.3em]
+\item false.
+\item Warning: Singleton variables
+\item ERROR: Unknown procedure: uncle/2
+\item ERROR: Syntax error: Operator expected
+\end{itemize}
+{\small\textit{Правильный ответ: ERROR: Unknown procedure: uncle/2.}}
+
+\item О чём предупреждает сообщение Singleton variables: [Y] при загрузке файла?
+\begin{itemize}[label=$\square$, leftmargin=1.5cm, itemsep=0.2em, topsep=0.3em]
+\item Переменная Y не может быть унифицирована
+\item Переменная Y встречается в клаузе только один раз, что часто означает опечатку
+\item Переменная Y объявлена глобальной
+\item Переменная Y используется в нескольких файлах
+\end{itemize}
+{\small\textit{Правильный ответ: Переменная Y встречается в клаузе только один раз, что часто означает опечатку.}}
+
+\item Почему правило a(X, Y) :- a(Z, Y), parent(X, Z). приводит к переполнению стека?
+\begin{itemize}[label=$\square$, leftmargin=1.5cm, itemsep=0.2em, topsep=0.3em]
+\item В теле правила слишком много переменных
+\item Это левая рекурсия: рекурсивный вызов стоит первым и выполняется до проверки фактов, поиск уходит в бесконечный спуск
+\item Предикат parent/2 не определён
+\item SWI-Prolog не поддерживает рекурсию
+\end{itemize}
+{\small\textit{Правильный ответ: Это левая рекурсия: рекурсивный вызов стоит первым и выполняется до проверки фактов, поиск уходит в бесконечный спуск.}}
+
+\item В каком порядке SWI-Prolog перебирает клаузы предиката и цели в теле правила?
+\begin{itemize}[label=$\square$, leftmargin=1.5cm, itemsep=0.2em, topsep=0.3em]
+\item Клаузы сверху вниз в порядке записи в файле, цели тела слева направо
+\item Клаузы в случайном порядке, цели справа налево
+\item Сначала правила, затем факты
+\item Клаузы в алфавитном порядке
+\end{itemize}
+{\small\textit{Правильный ответ: Клаузы сверху вниз в порядке записи в файле, цели тела слева направо.}}
+
+\item Каким запросом можно узнать текущую рабочую директорию в SWI-Prolog?
+\begin{itemize}[label=$\square$, leftmargin=1.5cm, itemsep=0.2em, topsep=0.3em]
+\item \texttt{?-} current\_dir(D).
+\item \texttt{?-} working\_directory(D, D).
+\item \texttt{?-} home(D).
+\item \texttt{?-} path(D).
+\end{itemize}
+{\small\textit{Правильный ответ: \texttt{?-} working\_directory(D, D).}}
+
+\item Что вернёт запрос \texttt{?-} findall(X, parent(tom, X), L).?
+\begin{itemize}[label=$\square$, leftmargin=1.5cm, itemsep=0.2em, topsep=0.3em]
+\item L = bob
+\item L = [bob, liz]
+\item L = [tom]
+\item false.
+\end{itemize}
+{\small\textit{Правильный ответ: L = [bob, liz].}}
+
+\item Каким запросом открыть встроенную справку по предикату halt/0?
+\begin{itemize}[label=$\square$, leftmargin=1.5cm, itemsep=0.2em, topsep=0.3em]
+\item \texttt{?-} man(halt).
+\item \texttt{?-} info halt.
+\item \texttt{?-} help(halt/0).
+\item \texttt{?-} doc halt.
+\end{itemize}
+{\small\textit{Правильный ответ: \texttt{?-} help(halt/0).}}
+
+\item Для чего служит запрос \texttt{?-} apropos(consult).?
+\begin{itemize}[label=$\square$, leftmargin=1.5cm, itemsep=0.2em, topsep=0.3em]
+\item Загружает файл consult.pl
+\item Ищет в документации предикаты и разделы по ключевому слову
+\item Выводит исходный код consult/1
+\item Отключает предикат consult/1
+\end{itemize}
+{\small\textit{Правильный ответ: Ищет в документации предикаты и разделы по ключевому слову.}}
+
+\item Какую логическую связку обозначает запятая в теле правила?
+\begin{itemize}[label=$\square$, leftmargin=1.5cm, itemsep=0.2em, topsep=0.3em]
+\item Конъюнкцию (логическое И)
+\item Дизъюнкцию (логическое ИЛИ)
+\item Отрицание
+\item Импликацию
+\end{itemize}
+{\small\textit{Правильный ответ: Конъюнкцию (логическое И).}}
+
+\item Какое расширение обычно имеют исходные файлы SWI-Prolog?
+\begin{itemize}[label=$\square$, leftmargin=1.5cm, itemsep=0.2em, topsep=0.3em]
+\item .swi
+\item .pl
+\item .prg
+\item .lsp
+\end{itemize}
+{\small\textit{Правильный ответ: .pl.}}
+
+\item Как читается декларативно правило father(X, Y) :- parent(X, Y), male(X).?
+\begin{itemize}[label=$\square$, leftmargin=1.5cm, itemsep=0.2em, topsep=0.3em]
+\item X — отец Y, если Y — родитель X и Y — мужчина
+\item X — отец Y, если X — родитель Y и X — мужчина
+\item X — отец Y или X — мужчина
+\item Каждый мужчина является отцом
+\end{itemize}
+{\small\textit{Правильный ответ: X — отец Y, если X — родитель Y и X — мужчина.}}
+
+\item Чем программа на Visual Prolog отличается от программы на SWI-Prolog?
+\begin{itemize}[label=$\square$, leftmargin=1.5cm, itemsep=0.2em, topsep=0.3em]
+\item В Visual Prolog нет правил, только факты
+\item В Visual Prolog обязательны секции domains, predicates и clauses с объявлением типов
+\item Visual Prolog не поддерживает рекурсию
+\item В Visual Prolog запросы вводятся только в top-level
+\end{itemize}
+{\small\textit{Правильный ответ: В Visual Prolog обязательны секции domains, predicates и clauses с объявлением типов.}}
+\end{enumerate}
+\normalsize

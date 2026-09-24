@@ -1,0 +1,44 @@
+Welcome to SWI-Prolog (threaded, 64 bits, version 10.0.2)
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software.
+Please run ?- license. for legal details.
+
+For online help and background, visit https://www.swi-prolog.org
+For built-in help, use ?- help(Topic). or ?- apropos(Word).
+
+1 ?- trace.
+true.
+
+[trace] 1 ?- grandparent(X, jim).
+   Call: (12) grandparent(_13014, jim) ? creep
+   Call: (13) parent(_13014, _14626) ? creep
+   Exit: (13) parent(tom, bob) ? creep
+   Call: (13) parent(bob, jim) ? creep
+   Fail: (13) parent(bob, jim) ? creep
+   Redo: (13) parent(_13014, _14626) ? creep
+   Exit: (13) parent(tom, liz) ? creep
+   Call: (13) parent(liz, jim) ? creep
+   Fail: (13) parent(liz, jim) ? creep
+   Redo: (13) parent(_13014, _14626) ? creep
+   Exit: (13) parent(bob, ann) ? creep
+   Call: (13) parent(ann, jim) ? creep
+   Fail: (13) parent(ann, jim) ? creep
+   Redo: (13) parent(_13014, _14626) ? creep
+   Exit: (13) parent(bob, pat) ? creep
+   Call: (13) parent(pat, jim) ? creep
+   Exit: (13) parent(pat, jim) ? creep
+   Exit: (12) grandparent(bob, jim) ? creep
+X = bob ;
+   Redo: (13) parent(_13014, _14626) ? creep
+   Exit: (13) parent(pat, jim) ? creep
+   Call: (13) parent(jim, jim) ? creep
+   Fail: (13) parent(jim, jim) ? creep
+   Fail: (12) grandparent(_13014, jim) ? creep
+false.
+
+[trace] 2 ?- notrace.
+true.
+
+[debug] 3 ?- nodebug.
+true.
+
+4 ?- halt.

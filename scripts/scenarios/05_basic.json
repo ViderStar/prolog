@@ -1,0 +1,15 @@
+{
+  "cwd": "lab_01",
+  "args": [
+    "family.pl"
+  ],
+  "steps": [
+    "parent(tom, bob).",
+    "parent(bob, tom).",
+    "male(tom).",
+    "female(tom).",
+    "father(tom, bob).",
+    "mother(liz, ann).",
+    "halt."
+  ]
+}

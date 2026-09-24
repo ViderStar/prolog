@@ -1,0 +1,10 @@
+{
+  "cwd": "lab_01",
+  "steps": [
+    {
+      "send": "help(halt/0).",
+      "quiet": 6
+    },
+    "halt."
+  ]
+}

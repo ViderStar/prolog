@@ -1,0 +1,24 @@
+{
+  "cwd": "lab_01",
+  "args": [
+    "family.pl"
+  ],
+  "steps": [
+    "trace.",
+    "grandparent(X, jim).",
+    {
+      "repeat": "c",
+      "while": "\\? $"
+    },
+    {
+      "keys": ";"
+    },
+    {
+      "repeat": "c",
+      "while": "\\? $"
+    },
+    "notrace.",
+    "nodebug.",
+    "halt."
+  ]
+}

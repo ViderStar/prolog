@@ -1,0 +1,10 @@
+{
+  "cwd": "lab_01",
+  "steps": [
+    "version.",
+    "current_prolog_flag(version, V).",
+    "working_directory(D, D).",
+    "ls.",
+    "halt."
+  ]
+}

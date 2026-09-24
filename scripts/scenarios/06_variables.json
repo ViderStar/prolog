@@ -1,0 +1,29 @@
+{
+  "cwd": "lab_01",
+  "args": [
+    "family.pl"
+  ],
+  "steps": [
+    "parent(tom, X).",
+    {
+      "repeat": ";",
+      "while": "(=|true)[^\\n]*[^.\\s]\\s*$"
+    },
+    "parent(X, pat).",
+    {
+      "repeat": ";",
+      "while": "(=|true)[^\\n]*[^.\\s]\\s*$"
+    },
+    "grandparent(X, jim).",
+    {
+      "repeat": ";",
+      "while": "(=|true)[^\\n]*[^.\\s]\\s*$"
+    },
+    "ancestor(tom, X).",
+    {
+      "repeat": ";",
+      "while": "(=|true)[^\\n]*[^.\\s]\\s*$"
+    },
+    "halt."
+  ]
+}

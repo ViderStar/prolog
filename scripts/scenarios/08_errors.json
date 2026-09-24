@@ -1,0 +1,18 @@
+{
+  "cwd": "lab_01/examples",
+  "steps": [
+    "[errors_demo].",
+    "uncle(X, jim).",
+    "parent(tom bob).",
+    "[no_such_file].",
+    "X is foo + 1.",
+    {
+      "send": "ancestor_bad(X, jim).",
+      "quiet": 2
+    },
+    {
+      "keys": "a"
+    },
+    "halt."
+  ]
+}

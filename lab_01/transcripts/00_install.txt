@@ -1,0 +1,28 @@
+artyo@MacBook-Pro lab_01 % brew info swi-prolog | head -11
+==> swi-prolog: stable 10.0.2 (bottled), HEAD
+ISO/Edinburgh-style Prolog interpreter
+https://www.swi-prolog.org/
+Installed (on request)
+From: https://github.com/Homebrew/homebrew-core/blob/HEAD/Formula/s/swi-prolog.rb
+License: BSD-2-Clause
+==> Installed Versions
+swi-prolog 10.0.2 (1,520 files, 29.3MB) [Linked]
+==> Dependencies
+Required (7): berkeley-db@5, gmp, libarchive, libyaml, openssl@3, pcre2, unixodbc
+Recursive Runtime (14): all installed ✔
+artyo@MacBook-Pro lab_01 % which swipl
+/opt/homebrew/bin/swipl
+artyo@MacBook-Pro lab_01 % swipl --version
+SWI-Prolog version 10.0.2 for arm64-darwin
+artyo@MacBook-Pro lab_01 % sw_vers
+ProductName:            macOS
+ProductVersion:         26.6.2
+BuildVersion:           25G83
+artyo@MacBook-Pro lab_01 % pwd
+/Users/artyo/PycharmProjects/prolog/lab_01
+artyo@MacBook-Pro lab_01 % ls -1
+examples
+family.pl
+report
+transcripts
+Практическая работа 1.pdf

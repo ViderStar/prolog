@@ -1,0 +1,25 @@
+{
+  "cwd": "lab_01",
+  "args": [
+    "family.pl"
+  ],
+  "steps": [
+    "parent(tom, X).",
+    {
+      "repeat": ";",
+      "while": "(=|true)[^\\n]*[^.\\s]\\s*$"
+    },
+    "ancestor(X, jim).",
+    {
+      "repeat": ";",
+      "while": "(=|true)[^\\n]*[^.\\s]\\s*$"
+    },
+    "parent(X, Y).",
+    {
+      "repeat": ";",
+      "while": "(=|true)[^\\n]*[^.\\s]\\s*$"
+    },
+    "findall(X-Y, parent(X, Y), Pairs), length(Pairs, N).",
+    "halt."
+  ]
+}

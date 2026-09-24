@@ -1,0 +1,34 @@
+Welcome to SWI-Prolog (threaded, 64 bits, version 10.0.2)
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software.
+Please run ?- license. for legal details.
+
+For online help and background, visit https://www.swi-prolog.org
+For built-in help, use ?- help(Topic). or ?- apropos(Word).
+
+1 ?- parent(tom, X).
+X = bob ;
+X = liz.
+
+2 ?- ancestor(X, jim).
+X = pat ;
+X = tom ;
+X = bob ;
+false.
+
+3 ?- parent(X, Y).
+X = tom,
+Y = bob ;
+X = tom,
+Y = liz ;
+X = bob,
+Y = ann ;
+X = bob,
+Y = pat ;
+X = pat,
+Y = jim.
+
+4 ?- findall(X-Y, parent(X, Y), Pairs), length(Pairs, N).
+Pairs = [tom-bob, tom-liz, bob-ann, bob-pat, pat-jim],
+N = 5.
+
+5 ?- halt.

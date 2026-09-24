@@ -1,0 +1,29 @@
+Welcome to SWI-Prolog (threaded, 64 bits, version 10.0.2)
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software.
+Please run ?- license. for legal details.
+
+For online help and background, visit https://www.swi-prolog.org
+For built-in help, use ?- help(Topic). or ?- apropos(Word).
+
+1 ?- version.
+Welcome to SWI-Prolog (threaded, 64 bits, version 10.0.2)
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software.
+Please run ?- license. for legal details.
+
+For online help and background, visit https://www.swi-prolog.org
+For built-in help, use ?- help(Topic). or ?- apropos(Word).
+
+true.
+
+2 ?- current_prolog_flag(version, V).
+V = 100002.
+
+3 ?- working_directory(D, D).
+D = '/Users/artyo/PycharmProjects/prolog/lab_01/'.
+
+4 ?- ls.
+% examples/                       report/                         Практическая работа 1.pdf
+% family.pl                       transcripts/
+true.
+
+5 ?- halt.

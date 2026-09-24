@@ -1,0 +1,13 @@
+{
+  "cwd": "lab_01",
+  "args": [
+    "family.pl"
+  ],
+  "steps": [
+    "father(tom, bob).",
+    "[family].",
+    "consult('family.pl').",
+    "listing(ancestor/2).",
+    "halt."
+  ]
+}
