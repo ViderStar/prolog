@@ -12,6 +12,7 @@
 | № | Тема | Что сделано |
 |---|------|-------------|
 | 1 | [Установка и настройка среды логического программирования Prolog](lab_01/) | SWI-Prolog 10.0.2, top-level, программа «Родственные отношения», 13 контрольных запросов, трассировка, диагностика ошибок |
+| 2 | [Разработка логических программ на Prolog для работы с базами знаний и решения задач поиска](lab_02/) | Динамическая база отношений «больше» с вводом с консоли, БЗ «Друзья», логическая задача «Спортсмены» (вариант 3) |
 
 ## Структура проекта
 
@@ -24,19 +25,29 @@ prolog/
 │   ├── render_terminal.py          # транскрипт → PNG «окна терминала»
 │   ├── gift_to_tex.py              # банк вопросов GIFT → LaTeX
 │   ├── build_lab01_figures.sh      # пересборка всех рисунков ПР1
+│   ├── build_lab02_figures.sh      # пересборка всех рисунков ПР2
 │   └── scenarios/                  # сценарии интерактивных сессий
-└── lab_01/                         # ПР1: установка и настройка среды
+├── lab_01/                         # ПР1: установка и настройка среды
+│   ├── README.md
+│   ├── family.pl                   # программа «Родственные отношения»
+│   ├── examples/errors_demo.pl     # файл с намеренными ошибками для анализа диагностики
+│   ├── transcripts/                # текстовые транскрипты сессий swipl
+│   ├── moodle_questions_gift.txt   # 30 контрольных вопросов для Moodle
+│   ├── Практическая работа 1.pdf   # задание
+│   └── report/
+│       ├── main.tex                # отчёт
+│       ├── main.pdf                # собранный отчёт
+│       ├── questions_pretty.tex    # вопросы в виде для печати (генерируется)
+│       └── figures/                # экранные формы
+└── lab_02/                         # ПР2: логические программы, базы знаний, задачи поиска
     ├── README.md
-    ├── family.pl                   # программа «Родственные отношения»
-    ├── examples/errors_demo.pl     # файл с намеренными ошибками для анализа диагностики
-    ├── transcripts/                # текстовые транскрипты сессий swipl
+    ├── compare.pl                  # динамическая база, наибольший и наименьший объект
+    ├── friends.pl                  # БЗ «Друзья» (вариант 3)
+    ├── sportsmen.pl                # логическая задача (вариант 3)
+    ├── transcripts/                # транскрипты сессий swipl
     ├── moodle_questions_gift.txt   # 30 контрольных вопросов для Moodle
-    ├── Практическая работа 1.pdf   # задание
-    └── report/
-        ├── main.tex                # отчёт
-        ├── main.pdf                # собранный отчёт
-        ├── questions_pretty.tex    # вопросы в виде для печати (генерируется)
-        └── figures/                # экранные формы
+    ├── Практическая работа 2.pdf   # задание
+    └── report/                     # main.tex, main.pdf, questions_pretty.tex, figures/
 ```
 
 ## Технологии
@@ -49,13 +60,14 @@ prolog/
 
 ```bash
 brew install swi-prolog tectonic
-cd lab_01 && swipl family.pl          # программа в интерактивной среде
+cd lab_01 && swipl family.pl          # ПР1: программа в интерактивной среде
+cd lab_02 && swipl compare.pl         # ПР2: затем ?- start.
 ```
 
-Пересборка отчёта:
+Пересборка отчётов (на примере ПР2; для ПР1 — `lab_01`):
 
 ```bash
-bash scripts/build_lab01_figures.sh                                   # транскрипты и рисунки
-python3 scripts/gift_to_tex.py lab_01/moodle_questions_gift.txt lab_01/report/questions_pretty.tex
-cd lab_01/report && tectonic -X compile main.tex                      # PDF
+bash scripts/build_lab02_figures.sh                                   # транскрипты и рисунки
+python3 scripts/gift_to_tex.py lab_02/moodle_questions_gift.txt lab_02/report/questions_pretty.tex
+cd lab_02/report && tectonic -X compile main.tex                      # PDF
 ```

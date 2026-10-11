@@ -1,0 +1,18 @@
+artyo@MacBook-Pro lab_02 % which swipl
+/opt/homebrew/bin/swipl
+artyo@MacBook-Pro lab_02 % swipl --version
+SWI-Prolog version 10.0.2 for arm64-darwin
+artyo@MacBook-Pro lab_02 % sw_vers
+ProductName:            macOS
+ProductVersion:         26.6.2
+BuildVersion:           25G83
+artyo@MacBook-Pro lab_02 % pwd
+/Users/artyo/Projects/prolog/lab_02
+artyo@MacBook-Pro lab_02 % ls -1
+compare.pl
+friends.pl
+moodle_questions_gift.txt
+report
+sportsmen.pl
+transcripts
+Практическая работа 2.pdf

@@ -1,0 +1,39 @@
+Welcome to SWI-Prolog (threaded, 64 bits, version 10.0.2)
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software.
+Please run ?- license. for legal details.
+
+For online help and background, visit https://www.swi-prolog.org
+For built-in help, use ?- help(Topic). or ?- apropos(Word).
+
+1 ?- день_рождения(Ф, И, _, _, 1988).
+Ф = иванова,
+И = лена ;
+Ф = сидоренко,
+И = маша.
+
+2 ?- день_рождения(Ф, И, _, май, _).
+Ф = сидоренко,
+И = маша.
+
+3 ?- хобби(Ф, И, книги).
+Ф = иванова,
+И = лена.
+
+4 ?- хобби(_, маша, Х).
+Х = танцы ;
+Х = кино.
+
+5 ?- хобби(Ф, И, кино), хобби(Ф, И, спорт).
+Ф = сидоренко,
+И = вася ;
+false.
+
+6 ?- друг(Ф, И).
+Ф = иванова,
+И = лена ;
+Ф = сидоренко,
+И = вася ;
+Ф = сидоренко,
+И = маша.
+
+7 ?- halt.

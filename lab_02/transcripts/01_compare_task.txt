@@ -1,0 +1,43 @@
+Welcome to SWI-Prolog (threaded, 64 bits, version 10.0.2)
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software.
+Please run ?- license. for legal details.
+
+For online help and background, visit https://www.swi-prolog.org
+For built-in help, use ?- help(Topic). or ?- apropos(Word).
+
+1 ?- start.
+Вводите отношения: «A > B» (A больше B) или «A < B» (A меньше B).
+Для завершения ввода введите #
+ввод: яблоко > слива
+  принято: яблоко больше слива
+ввод: авокадо > слива
+  принято: авокадо больше слива
+ввод: авокадо < папайя
+  принято: папайя больше авокадо
+ввод: дуриан > папайя
+  принято: дуриан больше папайя
+ввод: вишня < слива
+  принято: слива больше вишня
+ввод: #
+
+Объектов: 6, введённых отношений: 5
+Самый большой: единого нет, между собой несравнимы: яблоко, дуриан
+Самый маленький: вишня
+true.
+
+2 ?- listing(bigger/2).
+:- dynamic bigger/2.
+
+bigger(яблоко, слива).
+bigger(авокадо, слива).
+bigger(папайя, авокадо).
+bigger(дуриан, папайя).
+bigger(слива, вишня).
+
+true.
+
+3 ?- greater(дуриан, вишня).
+true ;
+false.
+
+4 ?- halt.

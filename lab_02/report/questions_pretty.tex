@@ -1,0 +1,273 @@
+\small
+\begin{enumerate}[label=\textbf{\arabic*.}, leftmargin=0pt, itemsep=1.2em]
+\item Для чего служит директива :- dynamic bigger/2. в начале программы?
+\begin{itemize}[label=$\square$, leftmargin=1.5cm, itemsep=0.2em, topsep=0.3em]
+\item Включает трассировку предиката bigger/2
+\item Объявляет, что клаузы bigger/2 можно добавлять и удалять во время выполнения
+\item Запрещает изменять факты bigger/2 после загрузки файла
+\item Делает предикат bigger/2 видимым из других файлов
+\end{itemize}
+{\small\textit{Правильный ответ: Объявляет, что клаузы bigger/2 можно добавлять и удалять во время выполнения.}}
+
+\item Чем assertz/1 отличается от asserta/1?
+\begin{itemize}[label=$\square$, leftmargin=1.5cm, itemsep=0.2em, topsep=0.3em]
+\item assertz удаляет клаузу, а asserta добавляет
+\item assertz добавляет клаузу в конец предиката, asserta — в начало
+\item assertz работает только с фактами, asserta — только с правилами
+\item Ничем, это синонимы
+\end{itemize}
+{\small\textit{Правильный ответ: assertz добавляет клаузу в конец предиката, asserta — в начало.}}
+
+\item Что делает вызов retractall(bigger(\_, \_))?
+\begin{itemize}[label=$\square$, leftmargin=1.5cm, itemsep=0.2em, topsep=0.3em]
+\item Удаляет только первый факт bigger/2
+\item Удаляет все клаузы bigger/2, при этом сам предикат остаётся определённым
+\item Выводит все факты bigger/2 на экран
+\item Завершает работу интерпретатора
+\end{itemize}
+{\small\textit{Правильный ответ: Удаляет все клаузы bigger/2, при этом сам предикат остаётся определённым.}}
+
+\item Чем retract/1 отличается от retractall/1?
+\begin{itemize}[label=$\square$, leftmargin=1.5cm, itemsep=0.2em, topsep=0.3em]
+\item retract удаляет первую подходящую клаузу и при возврате — следующие, retractall удаляет все подходящие за один вызов
+\item retract удаляет предикат целиком, retractall — только факты
+\item retractall можно применять только к статическим предикатам
+\item Ничем
+\end{itemize}
+{\small\textit{Правильный ответ: retract удаляет первую подходящую клаузу и при возврате — следующие, retractall удаляет все подходящие за один вызов.}}
+
+\item Что вернёт read\_line\_to\_string(user\_input, L) при достижении конца ввода (Ctrl+D)?
+\begin{itemize}[label=$\square$, leftmargin=1.5cm, itemsep=0.2em, topsep=0.3em]
+\item Пустую строку ""
+\item Атом halt
+\item Ошибку синтаксиса
+\item Атом end\_of\_file
+\end{itemize}
+{\small\textit{Правильный ответ: Атом end\_of\_file.}}
+
+\item Каков результат split\_string("яблоко > слива", " ", "", P)?
+\begin{itemize}[label=$\square$, leftmargin=1.5cm, itemsep=0.2em, topsep=0.3em]
+\item P = "яблоко > слива"
+\item P = [яблоко, >, слива]
+\item P = ["яблоко", ">", "слива"]
+\item false.
+\end{itemize}
+{\small\textit{Правильный ответ: P = ["яблоко", ">", "слива"].}}
+
+\item Для чего в программе используется normalize\_space(string(Clean), Line)?
+\begin{itemize}[label=$\square$, leftmargin=1.5cm, itemsep=0.2em, topsep=0.3em]
+\item Переводит строку в нижний регистр
+\item Убирает лишние пробелы в начале, конце и между словами
+\item Разбивает строку на слова
+\item Преобразует строку в число
+\end{itemize}
+{\small\textit{Правильный ответ: Убирает лишние пробелы в начале, конце и между словами.}}
+
+\item Зачем после format("ввод: ") вызывают flush\_output?
+\begin{itemize}[label=$\square$, leftmargin=1.5cm, itemsep=0.2em, topsep=0.3em]
+\item Чтобы очистить экран терминала
+\item Чтобы закрыть поток вывода
+\item Чтобы приглашение без перевода строки немедленно появилось на экране до чтения ввода
+\item Чтобы удалить введённые ранее данные
+\end{itemize}
+{\small\textit{Правильный ответ: Чтобы приглашение без перевода строки немедленно появилось на экране до чтения ввода.}}
+
+\item Что делает вызов prompt(Old, '') перед чтением строк из user\_input?
+\begin{itemize}[label=$\square$, leftmargin=1.5cm, itemsep=0.2em, topsep=0.3em]
+\item Запоминает прежнее приглашение в Old и заменяет его пустым, чтобы не выводилось «|: »
+\item Запрещает вводить пустые строки
+\item Очищает буфер ввода
+\item Загружает файл с пустым именем
+\end{itemize}
+{\small\textit{Правильный ответ: Запоминает прежнее приглашение в Old и заменяет его пустым, чтобы не выводилось «|: ».}}
+
+\item Зачем у правила greater/2 две клаузы?
+\begin{itemize}[label=$\square$, leftmargin=1.5cm, itemsep=0.2em, topsep=0.3em]
+\item Вторая клауза нужна для обработки ошибок
+\item Первая — базовый случай (прямой факт bigger), вторая — рекурсивный шаг по цепочке отношений
+\item Первая работает с числами, вторая — с атомами
+\item Две клаузы нужны только для ускорения поиска
+\end{itemize}
+{\small\textit{Правильный ответ: Первая — базовый случай (прямой факт bigger), вторая — рекурсивный шаг по цепочке отношений.}}
+
+\item Что произошло бы с greater/2 при цикле в фактах (a больше b, b больше a)?
+\begin{itemize}[label=$\square$, leftmargin=1.5cm, itemsep=0.2em, topsep=0.3em]
+\item Запрос вернул бы false
+\item Интерпретатор отказался бы загружать факты
+\item Рекурсия не имела бы конца и привела бы к переполнению стека
+\item Результат зависел бы только от порядка ввода
+\end{itemize}
+{\small\textit{Правильный ответ: Рекурсия не имела бы конца и привела бы к переполнению стека.}}
+
+\item Какую роль выполняет клауза add\_relation(X, Y) :- greater(Y, X), !, ...?
+\begin{itemize}[label=$\square$, leftmargin=1.5cm, itemsep=0.2em, topsep=0.3em]
+\item Добавляет новый факт в базу
+\item Обнаруживает противоречие: Y уже больше X, и отклоняет новый факт
+\item Удаляет старые факты
+\item Сортирует объекты по размеру
+\end{itemize}
+{\small\textit{Правильный ответ: Обнаруживает противоречие: Y уже больше X, и отклоняет новый факт.}}
+
+\item Как читается правило largest(X) :- object(X), \textbackslash{}+ bigger(\_, X).?
+\begin{itemize}[label=$\square$, leftmargin=1.5cm, itemsep=0.2em, topsep=0.3em]
+\item X больше любого объекта
+\item X — объект, для которого не найдётся ни одного объекта, больший X
+\item X — объект, который больше самого себя
+\item X — любой объект, имеющий хотя бы один факт bigger
+\end{itemize}
+{\small\textit{Правильный ответ: X — объект, для которого не найдётся ни одного объекта, больший X.}}
+
+\item Что означает оператор \textbackslash{}+ в Прологе?
+\begin{itemize}[label=$\square$, leftmargin=1.5cm, itemsep=0.2em, topsep=0.3em]
+\item Арифметическое сложение
+\item Логическое отрицание в смысле математической логики
+\item Отрицание как неуспех: цель \textbackslash{}+ G успешна, если доказать G не удаётся
+\item Объединение двух списков
+\end{itemize}
+{\small\textit{Правильный ответ: Отрицание как неуспех: цель \textbackslash{}+ G успешна, если доказать G не удаётся.}}
+
+\item Что делает предикат findall(X, largest(X), L)?
+\begin{itemize}[label=$\square$, leftmargin=1.5cm, itemsep=0.2em, topsep=0.3em]
+\item Находит первое решение и останавливается
+\item Удаляет все решения largest/1 из базы
+\item Собирает в список L значения X по всем решениям largest(X)
+\item Проверяет, что largest/1 определён
+\end{itemize}
+{\small\textit{Правильный ответ: Собирает в список L значения X по всем решениям largest(X).}}
+
+\item Почему для примера из задания (яблоко, слива, авокадо, папайя, дуриан, вишня) нет единого самого большого объекта?
+\begin{itemize}[label=$\square$, leftmargin=1.5cm, itemsep=0.2em, topsep=0.3em]
+\item Потому что вводились не все объекты
+\item Потому что дуриан меньше папайи
+\item Яблоко и дуриан не связаны цепочкой отношений, и ни один из них не доказуемо больше другого
+\item Потому что в Прологе нельзя сравнивать более пяти объектов
+\end{itemize}
+{\small\textit{Правильный ответ: Яблоко и дуриан не связаны цепочкой отношений, и ни один из них не доказуемо больше другого.}}
+
+\item Какой самый маленький объект в примере с фруктами из задания?
+\begin{itemize}[label=$\square$, leftmargin=1.5cm, itemsep=0.2em, topsep=0.3em]
+\item слива
+\item авокадо
+\item вишня
+\item яблоко
+\end{itemize}
+{\small\textit{Правильный ответ: вишня.}}
+
+\item Для чего служит вызов aggregate\_all(count, bigger(\_, \_), M)?
+\begin{itemize}[label=$\square$, leftmargin=1.5cm, itemsep=0.2em, topsep=0.3em]
+\item Суммирует значения аргументов bigger/2
+\item Подсчитывает число решений цели, то есть число фактов bigger/2
+\item Удаляет дубликаты фактов
+\item Сортирует факты по возрастанию
+\end{itemize}
+{\small\textit{Правильный ответ: Подсчитывает число решений цели, то есть число фактов bigger/2.}}
+
+\item Какой арности предикат день\_рождения(иванова, лена, 12, июнь, 1988)?
+\begin{itemize}[label=$\square$, leftmargin=1.5cm, itemsep=0.2em, topsep=0.3em]
+\item 3
+\item 4
+\item 5
+\item 6
+\end{itemize}
+{\small\textit{Правильный ответ: 5.}}
+
+\item Какие люди вернёт запрос \texttt{?-} день\_рождения(Ф, И, \_, \_, 1988).?
+\begin{itemize}[label=$\square$, leftmargin=1.5cm, itemsep=0.2em, topsep=0.3em]
+\item Только Лену Иванову
+\item Только Васю Сидоренко
+\item Лену Иванову и Машу Сидоренко
+\item Всех троих друзей
+\end{itemize}
+{\small\textit{Правильный ответ: Лену Иванову и Машу Сидоренко.}}
+
+\item Что означает символ \_ в запросе \texttt{?-} день\_рождения(Ф, И, \_, май, \_).?
+\begin{itemize}[label=$\square$, leftmargin=1.5cm, itemsep=0.2em, topsep=0.3em]
+\item Пустое значение, которое обязательно нужно подставить
+\item Имя предиката
+\item Анонимная переменная: значение на этой позиции не важно и не запоминается
+\item Знак вычитания
+\end{itemize}
+{\small\textit{Правильный ответ: Анонимная переменная: значение на этой позиции не важно и не запоминается.}}
+
+\item Сколько решений даст запрос \texttt{?-} хобби(\_, маша, Х).?
+\begin{itemize}[label=$\square$, leftmargin=1.5cm, itemsep=0.2em, topsep=0.3em]
+\item 0
+\item 1
+\item 2
+\item 3
+\end{itemize}
+{\small\textit{Правильный ответ: 2.}}
+
+\item Почему запрос \texttt{?-} хобби(Ф, И, кино), хобби(Ф, И, спорт). находит именно Васю?
+\begin{itemize}[label=$\square$, leftmargin=1.5cm, itemsep=0.2em, topsep=0.3em]
+\item Потому что Вася родился раньше всех
+\item Одни и те же переменные Ф и И в обеих целях требуют, чтобы оба хобби принадлежали одному человеку
+\item Потому что запятая означает «или»
+\item Потому что Вася — единственный друг в базе
+\end{itemize}
+{\small\textit{Правильный ответ: Одни и те же переменные Ф и И в обеих целях требуют, чтобы оба хобби принадлежали одному человеку.}}
+
+\item Какое имя в SWI-Prolog является переменной?
+\begin{itemize}[label=$\square$, leftmargin=1.5cm, itemsep=0.2em, topsep=0.3em]
+\item иванова
+\item 'Лена'
+\item Ф
+\item маша
+\end{itemize}
+{\small\textit{Правильный ответ: Ф.}}
+
+\item Как называется метод решения логической задачи в программе sportsmen.pl?
+\begin{itemize}[label=$\square$, leftmargin=1.5cm, itemsep=0.2em, topsep=0.3em]
+\item Динамическое программирование
+\item Метод наименьших квадратов
+\item Жадный алгоритм
+\item Образовать и проверить (generate and test)
+\end{itemize}
+{\small\textit{Правильный ответ: Образовать и проверить (generate and test).}}
+
+\item Сколько различных результатов даёт запрос \texttt{?-} findall(P, permutation([a, b, c], P), L), length(L, N).?
+\begin{itemize}[label=$\square$, leftmargin=1.5cm, itemsep=0.2em, topsep=0.3em]
+\item 3
+\item 6
+\item 9
+\item 27
+\end{itemize}
+{\small\textit{Правильный ответ: 6.}}
+
+\item Зачем для видов спорта и для погоды используют permutation/2, а не независимый выбор значений?
+\begin{itemize}[label=$\square$, leftmargin=1.5cm, itemsep=0.2em, topsep=0.3em]
+\item Для ускорения работы интерпретатора
+\item Перестановка гарантирует, что значения признака у троих спортсменов различны и все использованы
+\item Чтобы получить значения в алфавитном порядке
+\item Это требуется синтаксисом SWI-Prolog
+\end{itemize}
+{\small\textit{Правильный ответ: Перестановка гарантирует, что значения признака у троих спортсменов различны и все использованы.}}
+
+\item Какое условие задачи выражает цель \textbackslash{}+ member(человек(\_, боксёр, солнце), Люди)?
+\begin{itemize}[label=$\square$, leftmargin=1.5cm, itemsep=0.2em, topsep=0.3em]
+\item Боксёр любит только солнечную погоду
+\item Тот, кто любит солнечную погоду, не боксёр
+\item Среди спортсменов нет людей
+\item Все любят солнечную погоду
+\end{itemize}
+{\small\textit{Правильный ответ: Тот, кто любит солнечную погоду, не боксёр.}}
+
+\item Кем является Тонни согласно найденному решению?
+\begin{itemize}[label=$\square$, leftmargin=1.5cm, itemsep=0.2em, topsep=0.3em]
+\item Футболистом, любит снег
+\item Пловцом, любит солнце
+\item Футболистом, любит дождь
+\item Боксёром, любит дождь
+\end{itemize}
+{\small\textit{Правильный ответ: Боксёром, любит дождь.}}
+
+\item Что подтверждает результат «Найдено решений: 1» для логической задачи?
+\begin{itemize}[label=$\square$, leftmargin=1.5cm, itemsep=0.2em, topsep=0.3em]
+\item Что программа завершилась без ошибок и это всё
+\item Что условия задачи определяют ответ однозначно
+\item Что в задаче нет ограничений
+\item Что программа проверила только один вариант
+\end{itemize}
+{\small\textit{Правильный ответ: Что условия задачи определяют ответ однозначно.}}
+\end{enumerate}
+\normalsize

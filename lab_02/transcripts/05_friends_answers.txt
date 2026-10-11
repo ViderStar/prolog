@@ -1,0 +1,30 @@
+Welcome to SWI-Prolog (threaded, 64 bits, version 10.0.2)
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software.
+Please run ?- license. for legal details.
+
+For online help and background, visit https://www.swi-prolog.org
+For built-in help, use ?- help(Topic). or ?- apropos(Word).
+
+1 ?- ответы.
+Кто родился в 1988 году?
+  иванова-лена
+  сидоренко-маша
+Кто родился в мае?
+  сидоренко-маша
+У кого хобби книги?
+  иванова-лена
+Какое хобби у Маши?
+  танцы
+  кино
+У кого хобби и кино, и спорт?
+  сидоренко-вася
+Фамилии и имена всех друзей:
+  иванова-лена
+  сидоренко-вася
+  сидоренко-маша
+true.
+
+2 ?- findall(Ф-И, друг(Ф, И), Список).
+Список = [иванова-лена, сидоренко-вася, сидоренко-маша].
+
+3 ?- halt.
